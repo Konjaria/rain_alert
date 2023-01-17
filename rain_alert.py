@@ -30,7 +30,7 @@ api_call.raise_for_status()
 data = api_call.json()
 
 # checking the weather status
-if data.get("weather")[0]["id"] > 700:
+if data.get("weather")[0]["id"] < 700:
     BODY = "Don't forget to bring an umbrella, it goes to start rain ☔"
     # creating twilio client
     client = Client(account_sid, auth_token)
